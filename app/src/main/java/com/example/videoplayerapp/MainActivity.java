@@ -21,12 +21,14 @@ public class MainActivity extends AppCompatActivity {
 
         // obteniendo video del almacenamiento local (dispositivo)
 
+
         // Este metodo especifica la carpeta y el nombre del video
-        videoView.setVideoPath("android.resources:://" + getPackageName() + "/" + R.raw.mountains);
+        videoView.setVideoPath(
+                "android.resource://"+
+                getPackageName()+"/"+R.raw.mountains);
 
         // permite controlar un video, contiene los metodos de los botones (avanzar, pausa, etc)
         MediaController mc = new MediaController(this);
-
         mc.setAnchorView(videoView);
         videoView.setMediaController(mc);
 
